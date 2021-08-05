@@ -9,7 +9,6 @@
 | genus                | VARCHAR(64)   | NOT NULL                                        | product genus                              |
 | family               | VARCHAR(64)   | NOT NULL                                        | product family                             |
 | imageFile            | VARCHAR(64)   | NOT NULL                                        | product file                               |
-| category             | ENTITY        | NOT NULL                                        | product category                           |
 | carbohydrates        | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
 | protein              | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
 | fat                  | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
@@ -28,8 +27,9 @@
 | harvestedInNovember  | BOOLEAN       | NOT NULL                                        | When the product is available to be bought |
 | harvestedInDecember  | BOOLEAN       | NOT NULL                                        | When the product is available to be bought |
 | created_at           | TIMESTAMP     | NOT NULL, DEFAULT CURRENT_TIMESTAMP             | Creation date of the product               |
-| updated_at           | TIMESTAMP     | NULL                                            | Update date of the product                 |
+| updated_at           | TIMESTAMP     | NOT NULL                                        | Update date of the product                 |
 | created_by           | ENTITY        | NOT NULL                                        | Name of the creator                        |
+| category             | ENTITY        | NOT NULL                                        | product category                           |
 
     `imageFile` VARCHAR(128) DEFAULT NULL,
 

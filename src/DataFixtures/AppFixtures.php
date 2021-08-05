@@ -10,6 +10,7 @@ use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 
 /**
+ * Utilisation de faker pour générer des données aléatoires
  *  @link: https://fakerphp.github.io/
  */
 

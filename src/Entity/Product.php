@@ -144,6 +144,11 @@ class Product
      */
     private $createdBy;
 
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=2)
+     */
+    private $fiber;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -445,6 +450,18 @@ class Product
     public function setCreatedBy(?User $createdBy): self
     {
         $this->createdBy = $createdBy;
+
+        return $this;
+    }
+
+    public function getFiber(): ?string
+    {
+        return $this->fiber;
+    }
+
+    public function setFiber(string $fiber): self
+    {
+        $this->fiber = $fiber;
 
         return $this;
     }

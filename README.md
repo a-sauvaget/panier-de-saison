@@ -43,6 +43,13 @@ symfony console d:m:m
 symfony console doctrine:fixtures:load
 ```
 
+Pour visualiser les données:
+
+- installer l'extension VSCode: Docker (https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+- Dans l'extension, clic droit sur le container contenant la BDD -> `Attach shell`
+- Se connecter à la bdd: `mysql -p`
+- `use main`
+
 ## Auteur
 
 👤 **Alexandre Sauvaget**

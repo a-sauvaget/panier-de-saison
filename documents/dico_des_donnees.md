@@ -13,6 +13,7 @@
 | protein              | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
 | fat                  | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
 | sugar                | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
+| fiber                | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
 | calories             | DECIMAL(10,2) | NOT NULL, DEFAULT 0                             | product nutrition value for 100gr          |
 | harvestedInJanuary   | BOOLEAN       | NOT NULL                                        | When the product is available to be bought |
 | harvestedInFebruary  | BOOLEAN       | NOT NULL                                        | When the product is available to be bought |

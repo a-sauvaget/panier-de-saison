@@ -30,6 +30,7 @@ class ProductUnitTest extends TestCase
             ->setFat('true')
             ->setSugar('true')
             ->setCalories('true')
+            ->setFiber('true')
             ->setHarvestedInJanuary(true)
             ->setHarvestedInFebruary(true)
             ->setHarvestedInMarch(true)
@@ -57,6 +58,7 @@ class ProductUnitTest extends TestCase
         $this->assertTrue($product->getFat() === 'true');
         $this->assertTrue($product->getSugar() === 'true');
         $this->assertTrue($product->getCalories() === 'true');
+        $this->assertTrue($product->getFiber() === 'true');
         $this->assertTrue($product->getHarvestedInJanuary() === true);
         $this->assertTrue($product->getHarvestedInFebruary() === true);
         $this->assertTrue($product->getHarvestedInMarch() === true);
@@ -91,6 +93,7 @@ class ProductUnitTest extends TestCase
             ->setFat(1.2)
             ->setSugar(1.2)
             ->setCalories(1.2)
+            ->setFiber(1.2)
             ->setHarvestedInJanuary(true)
             ->setHarvestedInFebruary(true)
             ->setHarvestedInMarch(true)
@@ -112,11 +115,12 @@ class ProductUnitTest extends TestCase
         $this->assertFalse($product->getFamily() === 'false');
         $this->assertFalse($product->getImageFile() === 'false');
         $this->assertFalse($product->getCategory() === new Category());
-        $this->assertFalse($product->getCarbohydrates() === true);
-        $this->assertFalse($product->getProtein() === true);
-        $this->assertFalse($product->getFat() === true);
-        $this->assertFalse($product->getSugar() === true);
-        $this->assertFalse($product->getCalories() === true);
+        $this->assertFalse($product->getCarbohydrates() === false);
+        $this->assertFalse($product->getProtein() === false);
+        $this->assertFalse($product->getFat() === false);
+        $this->assertFalse($product->getSugar() === false);
+        $this->assertFalse($product->getCalories() === false);
+        $this->assertFalse($product->getFiber() === false);
         $this->assertFalse($product->getHarvestedInJanuary() === false);
         $this->assertFalse($product->getHarvestedInFebruary() === false);
         $this->assertFalse($product->getHarvestedInMarch() === false);

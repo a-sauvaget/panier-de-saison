@@ -1,0 +1,41 @@
+<!-- HERO -->
+<section class="hero is-primary has-text-centered mt-6">
+	<div class="hero-body">
+		<h1 class="title is-uppercase">Acces BackOffice</h1>
+	</div>
+</section>
+<!-- SECTIONS -->
+<section class=" section section-login" style="background-image: url('/img/fruits-297410.png')">
+	<div class="container is-max-desktop mt-5 mb-5">
+		<form method="post">
+			{% if error %}
+				<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+			{% endif %}
+
+			{% if app.user %}
+				<div class="mb-3">
+					Vous êtes connecté en tant que
+					{{ app.user.username }},
+					<a href="{{ path('app_logout') }}">Logout</a>
+				</div>
+			{% endif %}
+			<div class="box">
+				<div class="field">
+					<label class="label" for="inputEmail">Email</label>
+					<div class="control">
+						<input class="input" id="inputEmail" type="email" value="{{ last_username }}" name="email" placeholder="e.g. alex@example.com" autocomplete="email" required autofocu>
+					</div>
+				</div>
+				<div class="field pb-4">
+					<label class="label" for="inputPassword">Mot de passe</label>
+					<div class="control">
+						<input class="input" type="password" name="password" id="inputPassword" placeholder="********" autocomplete="current-password" required>
+					</div>
+					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+				</div>
+				<div class="has-text-centered">
+					<button class="button is-link">Se connecter</button>
+				</div>
+			</div>
+		</div>
+	</section>

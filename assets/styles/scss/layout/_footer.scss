@@ -1,0 +1,14 @@
+.social {
+  &-item {
+    display: inline;
+    padding: 0 0.5em;
+  }
+}
+
+.footer {
+  &--bottom {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+}

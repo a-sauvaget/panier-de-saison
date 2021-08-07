@@ -7,8 +7,4 @@
 
 // any CSS you import will output into a single css file (app.css in this case)
 import './styles/app.scss';
-
-/**
- * @link: https://bulma.io/documentation/overview/start/
- */
-import 'bulma';
+import './js/index';

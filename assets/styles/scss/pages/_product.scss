@@ -1,0 +1,69 @@
+.product {
+  &-container {
+    @include medium {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &-box {
+    height: 30em;
+    width: 12em;
+    @include medium {
+      width: 80%;
+    }
+    @include small-only {
+      height: 50%;
+      width: 85%;
+    }
+  }
+  &-image {
+    height: 31em;
+    width: auto;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+      rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+    @include medium {
+      height: auto;
+      width: 90%;
+      margin-bottom: 2em;
+    }
+    @include small-only {
+      width: 85%;
+    }
+  }
+}
+
+.list {
+  &-item {
+    display: block;
+    padding: 1em 0;
+
+    @include small-only {
+      padding: 0.5em 0;
+    }
+
+    &--divider {
+      border-bottom: solid 1px black;
+      padding-bottom: 1em;
+    }
+  }
+}
+
+.item {
+  &-name,
+  &-value,
+  &-content {
+    text-transform: capitalize;
+  }
+
+  &-name {
+    font-weight: bold;
+  }
+
+  &-value::after {
+    content: ' gr.';
+  }
+}

@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "main.scss",
+        "abstracts/_fonts.scss",
+        "abstracts/_variables.scss",
+        "abstracts/_mixins.scss",
+        "layout/_header.scss",
+        "layout/_global.scss",
+        "layout/_footer.scss",
+        "components/_button.scss",
+        "components/_main-menu.scss",
+        "components/_top-bar.scss",
+        "components/_excerpt.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}

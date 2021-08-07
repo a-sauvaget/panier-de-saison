@@ -1,12 +1,9 @@
 .home {
-  height: 25em;
+  height: 60vh;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-  @include small-only {
-    background-image: none;
-    height: auto;
-  }
+
   &-link {
     padding: 3em 0;
     height: 60px;

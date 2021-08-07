@@ -1,14 +1,16 @@
-.social {
-  &-item {
-    display: inline;
-    padding: 0 0.5em;
+.footer--height {
+  background-color: aquamarine;
+  height: 10vh;
+  padding-top: 1em;
+  @include small-only {
+    height: 20vh;
   }
 }
 
-.footer {
-  &--bottom {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+.social {
+  &-item {
+    display: inline;
+    padding-right: 1em;
+    padding-bottom: 1em;
   }
 }

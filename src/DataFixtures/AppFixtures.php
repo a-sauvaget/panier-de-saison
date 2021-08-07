@@ -81,7 +81,7 @@ class AppFixtures extends Fixture
             $legume->setLegumeName($faker->word())
                 ->setGenus($faker->word())
                 ->setFamily($faker->word())
-                ->setImageFile('https://i.ibb.co/DKYVj1y/apple-1239300-1280.jpg')
+                ->setImageFile('https://i.ibb.co/GFJwJHK/carrots-2387394-1280.jpg')
                 ->setCarbohydrates($faker->randomFloat(2, 0, 500))
                 ->setProtein($faker->randomFloat(2, 0, 500))
                 ->setFat($faker->randomFloat(2, 0, 500))

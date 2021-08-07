@@ -1,45 +1,48 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Récupération du mois ( de 1 à 12)
+  /**
+   * @link: https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth
+   */
+  // Récupération du mois ( de 0 à 11)
   const date = new Date();
   const month = date.getMonth();
   let monthName;
 
   switch (month) {
-    case 1:
+    case 0:
       monthName = 'janvier';
       break;
-    case 2:
+    case 1:
       monthName = 'février';
       break;
-    case 3:
+    case 2:
       monthName = 'mars';
       break;
-    case 4:
+    case 3:
       monthName = 'avril';
       break;
-    case 5:
+    case 4:
       monthName = 'mai';
       break;
-    case 6:
+    case 5:
       monthName = 'juin';
       break;
-    case 7:
+    case 6:
       monthName = 'juillet';
       break;
-    case 8:
+    case 7:
       monthName = 'août';
       break;
-    case 9:
+    case 8:
       monthName = 'septembre';
       break;
-    case 10:
+    case 9:
       monthName = 'octobre';
       break;
-    case 11:
+    case 10:
       monthName = 'novembre';
       break;
-    case 12:
-      monthName = 'decembre';
+    case 11:
+      monthName = 'décembre';
       break;
     default:
       console.log('Quel est ce mois');

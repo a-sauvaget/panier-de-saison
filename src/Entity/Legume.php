@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\ProductRepository;
+use App\Repository\LegumeRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=ProductRepository::class)
+ * @ORM\Entity(repositoryClass=LegumeRepository::class)
  */
-class Product
+class Legume
 {
     /**
      * @ORM\Id
@@ -20,7 +20,7 @@ class Product
     /**
      * @ORM\Column(type="string", length=64)
      */
-    private $productName;
+    private $legumeName;
 
     /**
      * @ORM\Column(type="string", length=64)
@@ -33,7 +33,7 @@ class Product
     private $family;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=64)
      */
     private $imageFile;
 
@@ -56,6 +56,11 @@ class Product
      * @ORM\Column(type="decimal", precision=10, scale=2)
      */
     private $sugar;
+
+    /**
+     * @ORM\Column(type="decimal", precision=10, scale=2)
+     */
+    private $fiber;
 
     /**
      * @ORM\Column(type="decimal", precision=10, scale=2)
@@ -133,35 +138,24 @@ class Product
     private $updatedAt;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Category::class)
-     * @ORM\JoinColumn(nullable=false)
-     */
-    private $category;
-
-    /**
      * @ORM\ManyToOne(targetEntity=User::class)
      * @ORM\JoinColumn(nullable=false)
      */
     private $createdBy;
-
-    /**
-     * @ORM\Column(type="decimal", precision=10, scale=2)
-     */
-    private $fiber;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getProductName(): ?string
+    public function getLegumeName(): ?string
     {
-        return $this->productName;
+        return $this->legumeName;
     }
 
-    public function setProductName(string $productName): self
+    public function setLegumeName(string $legumeName): self
     {
-        $this->productName = $productName;
+        $this->legumeName = $legumeName;
 
         return $this;
     }
@@ -246,6 +240,18 @@ class Product
     public function setSugar(string $sugar): self
     {
         $this->sugar = $sugar;
+
+        return $this;
+    }
+
+    public function getFiber(): ?string
+    {
+        return $this->fiber;
+    }
+
+    public function setFiber(string $fiber): self
+    {
+        $this->fiber = $fiber;
 
         return $this;
     }
@@ -430,18 +436,6 @@ class Product
         return $this;
     }
 
-    public function getCategory(): ?Category
-    {
-        return $this->category;
-    }
-
-    public function setCategory(?Category $category): self
-    {
-        $this->category = $category;
-
-        return $this;
-    }
-
     public function getCreatedBy(): ?User
     {
         return $this->createdBy;
@@ -450,18 +444,6 @@ class Product
     public function setCreatedBy(?User $createdBy): self
     {
         $this->createdBy = $createdBy;
-
-        return $this;
-    }
-
-    public function getFiber(): ?string
-    {
-        return $this->fiber;
-    }
-
-    public function setFiber(string $fiber): self
-    {
-        $this->fiber = $fiber;
 
         return $this;
     }

@@ -41,15 +41,21 @@ class AppFixtures extends Fixture
         $manager->persist($user);
 
         // Création catégories
-        for ($k = 0; $k < 5; $k++) {
-            $category = new Category();
+        $category = new Category();
 
-            $category->setCategoryName($faker->word())
-                ->setCreatedAt(new DateTimeImmutable)
-                ->setUpdatedAt(new DateTimeImmutable);
+        $category->setCategoryName('fruit')
+            ->setCreatedAt(new DateTimeImmutable)
+            ->setUpdatedAt(new DateTimeImmutable);
 
-            $manager->persist($category);
-        }
+        $manager->persist($category);
+
+        $category = new Category();
+
+        $category->setCategoryName('legume')
+            ->setCreatedAt(new DateTimeImmutable)
+            ->setUpdatedAt(new DateTimeImmutable);
+
+        $manager->persist($category);
 
         // Création product
         for ($p = 0; $p < 20; $p++) {

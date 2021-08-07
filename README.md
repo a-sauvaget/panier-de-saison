@@ -1,9 +1,9 @@
-<h1 align="center">Welcome to fruits-legumes-saison 👋</h1>
+<h1 align="center">Welcome to panier-de-saison 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> &#34;Fruit et légumes de saison&#34; est une application Web destinée à tous. Elle a pour but de proposer la liste des fruits et légumes disponible (de saison) à la vente mois par mois.&#34;
+> &#34;Panier de saison&#34; est une application Web destinée à tous. Elle a pour but de proposer la liste des fruits et légumes disponible (de saison) à la vente mois par mois.&#34;
 
 ## Pré-requis
 

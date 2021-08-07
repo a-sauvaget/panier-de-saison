@@ -1,0 +1,21 @@
+.products {
+  &-box {
+    height: 25em;
+    width: 25em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include medium-only {
+      height: 18em;
+      width: 18em;
+    }
+    @include small-only {
+      height: 15em;
+      width: 15em;
+    }
+  }
+
+  &-title {
+    text-transform: uppercase;
+  }
+}

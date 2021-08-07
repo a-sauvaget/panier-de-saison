@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+		<div class="navbar-brand">
+			<a class="navbar-item" href="#">
+				<img src="https://i.ibb.co/S7LT9Vq/fruit-40276.png" alt=""/>
+			</a>
+
+			<a role="button" class="navbar-burger" id="burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+				<span aria-hidden="true"></span>
+			</a>
+		</div>
+
+		<div id="nav-links" class="navbar-menu">
+			<div class="navbar-start">
+				<a href="#" class="navbar-item">
+					<span class="icon is-small">
+						<i class="fas fa-home" aria-hidden="true"></i>
+					</span>
+					<span>
+						Accueil
+					</span>
+				</a>
+
+				<a href="#" class="navbar-item">
+					<span class="icon is-small">
+						<i class="fas fa-bookmark" aria-hidden="true"></i>
+					</span>
+					<span>
+						A propos
+					</span>
+				</a>
+
+				<a href="#" class="navbar-item">
+					<span class="icon is-small">
+						<i class="fas fa-envelope" aria-hidden="true"></i>
+					</span>
+					<span>
+						Contact
+					</span>
+				</a>
+			</div>
+		</div>
+	</nav>
+	<!-- HERO -->
+	<section class="hero is-primary has-text-centered pt-5">
+		<div class="hero-body">
+			<p class="subtitle">Les paniers du mois de:</p>
+			<p class="title title--hero is-uppercase"></p>
+		</div>
+	</section>
+	<!-- SECTION  -->
+	<h2 class="subtitle has-text-centered mt-2 mb-6">
+		👨‍🌾 Choisissez entre le panier de légumes ou le panier de fruits ! 👩‍🌾
+	</h2>
+	<div class="container is-fluid is-flex is-justify-content-space-evenly is-flex-wrap-wrap home" style="background-image: url('https://i.ibb.co/RzjZkXm/fruits-297410.png')">
+		<a class="pb-6" href="#">
+			<button class="button is-link is-large">Légumes 🥕</button>
+		</a>
+
+		<a class="pb-6" href="#">
+			<button class="button is-link is-large">Fruits 🍎</button>
+		</a>
+	</div>
+</section>
+<!-- FOOTER -->
+<footer class="footer is-flex is-justify-content-space-evenly is-flex-wrap-wrap">
+	<div class="content has-text-centered">
+		<p>Fait avec &hearts; par Alexandre Sauvaget à Nantes 🐘</p>
+	</div>
+	<ul class="social">
+		<li class="social-item">
+			<a href="https://github.com/a-sauvaget" target="_blank" rel="noopener noreferrer">
+				<i class="fab fa-2x fa-github"></i>
+			</a>
+		</li>
+		<li class="social-item">
+			<a href="https://www.linkedin.com/in/alexandresauvaget/" target="_blank" rel="noopener noreferrer">
+				<i class="fab fa-2x fa-linkedin"></i>
+			</a>
+		</li>
+	</ul>
+</footer>{% endblock %}

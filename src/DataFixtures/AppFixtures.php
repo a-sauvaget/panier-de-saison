@@ -3,8 +3,8 @@
 namespace App\DataFixtures;
 
 use App\Entity\User;
-use App\Entity\Category;
-use App\Entity\Product;
+use App\Entity\Fruit;
+use App\Entity\Legume;
 use DateTimeImmutable;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
@@ -40,35 +40,18 @@ class AppFixtures extends Fixture
 
         $manager->persist($user);
 
-        // Création catégories
-        $category = new Category();
+        // Création fruit
+        for ($p = 0; $p < 16; $p++) {
+            $fruit = new Fruit();
 
-        $category->setCategoryName('fruit')
-            ->setCreatedAt(new DateTimeImmutable)
-            ->setUpdatedAt(new DateTimeImmutable);
-
-        $manager->persist($category);
-
-        $category = new Category();
-
-        $category->setCategoryName('legume')
-            ->setCreatedAt(new DateTimeImmutable)
-            ->setUpdatedAt(new DateTimeImmutable);
-
-        $manager->persist($category);
-
-        // Création product
-        for ($p = 0; $p < 20; $p++) {
-            $product = new Product();
-
-            $product->setProductName($faker->word())
+            $fruit->setFruitName($faker->word())
                 ->setGenus($faker->word())
                 ->setFamily($faker->word())
                 ->setImageFile('https://i.ibb.co/DKYVj1y/apple-1239300-1280.jpg')
-                ->setCategory($category)
                 ->setCarbohydrates($faker->randomFloat(2, 0, 500))
                 ->setProtein($faker->randomFloat(2, 0, 500))
                 ->setFat($faker->randomFloat(2, 0, 500))
+                ->setFiber($faker->randomFloat(2, 0, 500))
                 ->setSugar($faker->randomFloat(2, 0, 500))
                 ->setFiber($faker->randomFloat(2, 0, 500))
                 ->setCalories($faker->randomFloat(2, 0, 500))
@@ -88,7 +71,41 @@ class AppFixtures extends Fixture
                 ->setUpdatedAt(new DateTimeImmutable)
                 ->setCreatedBy($user);
 
-            $manager->persist($product);
+            $manager->persist($fruit);
+        }
+
+        // Création légumes
+        for ($p = 0; $p < 16; $p++) {
+            $legume = new Legume();
+
+            $legume->setLegumeName($faker->word())
+                ->setGenus($faker->word())
+                ->setFamily($faker->word())
+                ->setImageFile('https://i.ibb.co/DKYVj1y/apple-1239300-1280.jpg')
+                ->setCarbohydrates($faker->randomFloat(2, 0, 500))
+                ->setProtein($faker->randomFloat(2, 0, 500))
+                ->setFat($faker->randomFloat(2, 0, 500))
+                ->setFiber($faker->randomFloat(2, 0, 500))
+                ->setSugar($faker->randomFloat(2, 0, 500))
+                ->setFiber($faker->randomFloat(2, 0, 500))
+                ->setCalories($faker->randomFloat(2, 0, 500))
+                ->setHarvestedInJanuary($faker->boolean())
+                ->setHarvestedInFebruary($faker->boolean())
+                ->setHarvestedInMarch($faker->boolean())
+                ->setHarvestedInApril($faker->boolean())
+                ->setHarvestedInMay($faker->boolean())
+                ->setHarvestedInJune($faker->boolean())
+                ->setHarvestedInJuly($faker->boolean())
+                ->setHarvestedInAugust($faker->boolean())
+                ->setHarvestedInSeptember($faker->boolean())
+                ->setHarvestedInOctober($faker->boolean())
+                ->setHarvestedInNovember($faker->boolean())
+                ->setHarvestedInDecember($faker->boolean())
+                ->setCreatedAt(new DateTimeImmutable)
+                ->setUpdatedAt(new DateTimeImmutable)
+                ->setCreatedBy($user);
+
+            $manager->persist($legume);
         }
 
         $manager->flush();

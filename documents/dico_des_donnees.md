@@ -1,6 +1,6 @@
 # Dictionnaire de données
 
-## Product ('product')
+## Fruit et Legume
 
 | Field                | Type          | Spec.                                           | Description                                |
 | -------------------- | ------------- | ----------------------------------------------- | ------------------------------------------ |
@@ -32,8 +32,6 @@
 | created_by           | ENTITY        | NOT NULL                                        | Name of the creator                        |
 | category             | ENTITY        | NOT NULL                                        | product category                           |
 
-    `imageFile` VARCHAR(128) DEFAULT NULL,
-
 ## User ('user')
 
 | Field      | Type         | Spec.                                           | Description                |
@@ -46,12 +44,3 @@
 | role       | ENTITY       | NOT NULL                                        | User role                  |
 | created_at | TIMESTAMP    | NOT NULL, DEFAULT CURRENT_TIMESTAMP             | Creation date of the month |
 | updated_at | TIMESTAMP    | NOT NULL                                        | Update date of the month   |
-
-## Category ('Category')
-
-| Field        | Type        | Spec.                                           | Description                   |
-| ------------ | ----------- | ----------------------------------------------- | ----------------------------- |
-| id           | INT         | PRIMARY KEY, NOT NULL, UNSIGNED, AUTO_INCREMENT | Category id                   |
-| categoryName | VARCHAR(64) | NOT NULL UNIQUE                                 | Category name                 |
-| created_at   | TIMESTAMP   | NOT NULL, DEFAULT CURRENT_TIMESTAMP             | Creation date of the category |
-| updated_at   | TIMESTAMP   | NOT NULL                                        | Update date of the category   |

@@ -8,6 +8,7 @@ use App\Entity\Legume;
 use DateTimeImmutable;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 /**
  * Utilisation de faker pour générer des données aléatoires
@@ -22,6 +23,10 @@ use Faker\Factory;
  */
 class AppFixtures extends Fixture
 {
+    public function __construct(UserPasswordEncoderInterface $encoder)
+    {
+        $this->encoder = $encoder;
+    }
 
     public function load(ObjectManager $manager)
     {
@@ -34,10 +39,12 @@ class AppFixtures extends Fixture
         $user->setEmail('user@test.com')
             ->setFirstname($faker->firstName())
             ->setLastname($faker->lastName())
-            ->setPassword('password')
             ->setRoles(['ROLE_PRODUCT_MANAGER'])
             ->setCreatedAt(new DateTimeImmutable)
             ->setUpdatedAt(new DateTimeImmutable);
+
+        $password = $this->encoder->encodePassword($user, 'password');
+        $user->setPassword($password);
 
         $manager->persist($user);
 

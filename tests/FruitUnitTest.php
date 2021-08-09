@@ -159,5 +159,6 @@ class FruitUnitTest extends TestCase
         $this->assertEmpty($fruit->getCreatedAt());
         $this->assertEmpty($fruit->getUpdatedAt());
         $this->assertEmpty($fruit->getCreatedBy());
+        $this->assertEmpty($fruit->getId());
     }
 }

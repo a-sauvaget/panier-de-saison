@@ -159,5 +159,6 @@ class LegumeUnitTest extends TestCase
         $this->assertEmpty($legume->getCreatedAt());
         $this->assertEmpty($legume->getUpdatedAt());
         $this->assertEmpty($legume->getCreatedBy());
+        $this->assertEmpty($legume->getId());
     }
 }

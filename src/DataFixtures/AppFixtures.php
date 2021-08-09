@@ -11,13 +11,14 @@ use Doctrine\Persistence\ObjectManager;
 
 /**
  * Utilisation de faker pour générer des données aléatoires
- *  @link: https://fakerphp.github.io/
+ * @link: https://fakerphp.github.io/
  */
 
 use Faker\Factory;
 
 /**
  * @link: https://symfony.com/doc/current/bundles/DoctrineFixturesBundle/index.html
+ * @codeCoverageIgnore
  */
 class AppFixtures extends Fixture
 {
@@ -27,13 +28,13 @@ class AppFixtures extends Fixture
         // use the factory to create a Faker\Generator instance
         $faker = Factory::create('fr_FR');
 
-        // Création utilisateurs
+        // Création utilisateur
         $user = new User();
 
         $user->setEmail('user@test.com')
             ->setFirstname($faker->firstName())
             ->setLastname($faker->lastName())
-            ->setPassword('user_test')
+            ->setPassword('password')
             ->setRoles(['ROLE_PRODUCT_MANAGER'])
             ->setCreatedAt(new DateTimeImmutable)
             ->setUpdatedAt(new DateTimeImmutable);
@@ -74,6 +75,37 @@ class AppFixtures extends Fixture
             $manager->persist($fruit);
         }
 
+        // Création d'un fruit pour les tests
+        $fruit = new Fruit();
+
+        $fruit->setFruitName('Test Fruit')
+            ->setGenus($faker->word())
+            ->setFamily($faker->word())
+            ->setImageFile('https://i.ibb.co/DKYVj1y/apple-1239300-1280.jpg')
+            ->setCarbohydrates($faker->randomFloat(2, 0, 500))
+            ->setProtein($faker->randomFloat(2, 0, 500))
+            ->setFat($faker->randomFloat(2, 0, 500))
+            ->setFiber($faker->randomFloat(2, 0, 500))
+            ->setSugar($faker->randomFloat(2, 0, 500))
+            ->setFiber($faker->randomFloat(2, 0, 500))
+            ->setCalories($faker->randomFloat(2, 0, 500))
+            ->setHarvestedInJanuary(true)
+            ->setHarvestedInFebruary(true)
+            ->setHarvestedInMarch(true)
+            ->setHarvestedInApril(true)
+            ->setHarvestedInMay(true)
+            ->setHarvestedInJune(true)
+            ->setHarvestedInJuly(true)
+            ->setHarvestedInAugust(true)
+            ->setHarvestedInSeptember(true)
+            ->setHarvestedInOctober(true)
+            ->setHarvestedInNovember(true)
+            ->setHarvestedInDecember(true)
+            ->setCreatedAt(new DateTimeImmutable)
+            ->setUpdatedAt(new DateTimeImmutable)
+            ->setCreatedBy($user);
+
+        $manager->persist($fruit);
         // Création légumes
         for ($p = 0; $p < 16; $p++) {
             $legume = new Legume();
@@ -107,6 +139,38 @@ class AppFixtures extends Fixture
 
             $manager->persist($legume);
         }
+
+        // Création d'un légume pour les tests
+        $legume = new Legume();
+
+        $legume->setLegumeName('Test Legume')
+            ->setGenus($faker->word())
+            ->setFamily($faker->word())
+            ->setImageFile('https://i.ibb.co/GFJwJHK/carrots-2387394-1280.jpg')
+            ->setCarbohydrates($faker->randomFloat(2, 0, 500))
+            ->setProtein($faker->randomFloat(2, 0, 500))
+            ->setFat($faker->randomFloat(2, 0, 500))
+            ->setFiber($faker->randomFloat(2, 0, 500))
+            ->setSugar($faker->randomFloat(2, 0, 500))
+            ->setFiber($faker->randomFloat(2, 0, 500))
+            ->setCalories($faker->randomFloat(2, 0, 500))
+            ->setHarvestedInJanuary(true)
+            ->setHarvestedInFebruary(true)
+            ->setHarvestedInMarch(true)
+            ->setHarvestedInApril(true)
+            ->setHarvestedInMay(true)
+            ->setHarvestedInJune(true)
+            ->setHarvestedInJuly(true)
+            ->setHarvestedInAugust(true)
+            ->setHarvestedInSeptember(true)
+            ->setHarvestedInOctober(true)
+            ->setHarvestedInNovember(true)
+            ->setHarvestedInDecember(true)
+            ->setCreatedAt(new DateTimeImmutable)
+            ->setUpdatedAt(new DateTimeImmutable)
+            ->setCreatedBy($user);
+
+        $manager->persist($legume);
 
         $manager->flush();
     }

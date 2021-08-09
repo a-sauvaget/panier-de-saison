@@ -36,7 +36,13 @@ symfony serve -d
 php bin/phpunit --testdox
 ```
 
-### Ajouter des données de test
+## Visualiser la couverture du code
+
+```bash
+XDEBUG_MODE=coverage ./vendor/bin/phpunit --coverage-html ./tests/test-coverage
+```
+
+### Ajouter des données factices
 
 Une fois les entités créées, effectuer les migrations plus ajout de données.
 
@@ -53,11 +59,27 @@ Pour visualiser les données:
 - Se connecter à la bdd: `mysql -p`
 - `use main`
 
+## Création BDD de test
+
+BDD dédié à l'execution de tests.
+
+```bash
+APP_ENV=test symfony console doctrine:database:create
+APP_ENV=test symfony console doctrine:migrations:migrate -n
+APP_ENV=test symfony console doctrine:fixtures:load
+```
+
+Pour lancer les tests:
+
+```bash
+APP_ENV=test symfony php bin/phpunit --coverage-html ./tests/test-coverage
+```
+
 ## Production
 
 ### Envoie des mails de Contacts
 
-Les mails de prise de contact sont stockés en BDD. Pour les envoyer au 'PRODUCT_MANAGER' par mail, il faut meetre en place un **cron** (https://docs.ovh.com/fr/hosting/mutualise-taches-automatisees-cron/) sur:
+Les mails de prise de contact sont stockés en BDD. Pour les envoyer au 'PRODUCT_MANAGER' par mail, il faut mettre en place un **cron** (https://docs.ovh.com/fr/hosting/mutualise-taches-automatisees-cron/) sur:
 
 ```bash
 symfony console app:send-contact

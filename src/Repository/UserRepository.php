@@ -35,4 +35,16 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
         $this->_em->persist($user);
         $this->_em->flush();
     }
+
+    /**
+     * Utilisé pour récupérer le product manager
+     */
+    public function getProductManager()
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.roles LIKE :roles')
+            ->setParameter('roles', '%ROLE_PRODUCT_MANAGER%')
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 }

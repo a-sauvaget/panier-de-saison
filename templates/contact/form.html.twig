@@ -7,26 +7,49 @@
 <!-- SECTION  -->
 <section class="section section-contact" style="background-image: url('/img/fruits-297410.png')">
 	<div class="container is-max-desktop mt-5 mb-5">
-		<form class="box">
+		<div
+			class="box">
+			<!-- https://symfony.com/doc/current/div/form_customization.html -->
+			{{ form_start(form)}}
+			{% for message in app.flashes('success') %}
+				<div class="notification is-success">
+					{{ message }}
+				</div>
+			{% endfor %}
+
 			<div class="field">
-				<label class="label" for="name">Nom</label>
+				<label class="label" for="contactName">
+					{{form_label(form.nom)}}
+				</label>
 				<div class="control">
-					<input class="input" id="name" type="text" placeholder="Nom" required/>
+					{{form_widget(form.nom, {'attr': {'class': 'input'}})}}
 				</div>
 			</div>
+
 			<div class="field">
-				<label class="label" for="email">Email</label>
+				<label class="label" for="contactEmail">
+					{{form_label(form.email)}}
+				</label>
 				<div class="control">
-					<input class="input" id="email" type="email" placeholder="e.g. alex@example.com" required/>
+					{{form_widget(form.email, {'attr': {'class': 'input'}})}}
 				</div>
 			</div>
+
 			<div class="field">
-				<label class="label" for="message">Votre message:</label>
-				<textarea class="textarea" id="message" name="message" rows="5" cols="33" placeholder="Je vous contacte car..."></textarea>
+				<label class="label" for="contactMessage">
+					{{form_label(form.message)}}
+				</label>
+				<div class="control">
+					{{form_widget(form.message, {'attr': {'class': 'input'}})}}
+				</div>
 			</div>
+
 			<div class="has-text-centered">
-				<button class="button is-link">Envoyer</button>
+				{{form_widget(form.envoyer, {'attr': {'class': 'button is-link'}})}}
 			</div>
+
+			{{ form_end(form)}}
+
 		</form>
 	</div>
 </section>

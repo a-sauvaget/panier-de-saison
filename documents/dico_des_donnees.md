@@ -29,8 +29,6 @@
 | harvestedInDecember     | BOOLEAN       | NOT NULL                                        | When the product is available to be bought |
 | created_at              | TIMESTAMP     | NOT NULL, DEFAULT CURRENT_TIMESTAMP             | Creation date of the product               |
 | updated_at              | TIMESTAMP     | NOT NULL                                        | Update date of the product                 |
-| created_by              | ENTITY        | NOT NULL                                        | Name of the creator                        |
-| category                | ENTITY        | NOT NULL                                        | product category                           |
 
 ## User
 

@@ -76,8 +76,7 @@ class AppFixtures extends Fixture
                 ->setHarvestedInNovember($faker->boolean())
                 ->setHarvestedInDecember($faker->boolean())
                 ->setCreatedAt(new DateTimeImmutable)
-                ->setUpdatedAt(new DateTimeImmutable)
-                ->setCreatedBy($user);
+                ->setUpdatedAt(new DateTimeImmutable);
 
             $manager->persist($fruit);
         }
@@ -109,8 +108,7 @@ class AppFixtures extends Fixture
             ->setHarvestedInNovember(true)
             ->setHarvestedInDecember(true)
             ->setCreatedAt(new DateTimeImmutable)
-            ->setUpdatedAt(new DateTimeImmutable)
-            ->setCreatedBy($user);
+            ->setUpdatedAt(new DateTimeImmutable);
 
         $manager->persist($fruit);
         // Création légumes
@@ -141,8 +139,7 @@ class AppFixtures extends Fixture
                 ->setHarvestedInNovember($faker->boolean())
                 ->setHarvestedInDecember($faker->boolean())
                 ->setCreatedAt(new DateTimeImmutable)
-                ->setUpdatedAt(new DateTimeImmutable)
-                ->setCreatedBy($user);
+                ->setUpdatedAt(new DateTimeImmutable);
 
             $manager->persist($legume);
         }
@@ -174,8 +171,7 @@ class AppFixtures extends Fixture
             ->setHarvestedInNovember(true)
             ->setHarvestedInDecember(true)
             ->setCreatedAt(new DateTimeImmutable)
-            ->setUpdatedAt(new DateTimeImmutable)
-            ->setCreatedBy($user);
+            ->setUpdatedAt(new DateTimeImmutable);
 
         $manager->persist($legume);
 

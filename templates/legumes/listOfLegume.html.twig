@@ -8,7 +8,7 @@
 <!-- SECTION  -->
 <section class="section is-flex is-flex-wrap-wrap is-justify-content-space-evenly section-legumes">
 	{% for legume in legumes %}
-		<a href="{{path('legume-info', {'legumeName': legume.legumeName})}}" class="box products-box" style="background-image: url('{{legume.imageFile}}');">
+		<a href="{{path('legume-info', {'legumeName': legume.legumeName})}}" class="box products-box" style="background-image: url('/uploads/product/{{legume.file}}');">
 			<h2 class="title has-text-centered products-title">{{legume.legumeName}}</h2>
 		</a>
 	{% endfor %}

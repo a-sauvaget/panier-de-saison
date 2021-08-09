@@ -28,3 +28,4 @@ yarn-error.log
 node_modules
 
 tests/test-coverage
+public/uploads/product

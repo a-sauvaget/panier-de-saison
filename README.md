@@ -36,7 +36,7 @@ symfony serve -d
 php bin/phpunit --testdox
 ```
 
-### Ajouter des données
+### Ajouter des données de test
 
 Une fois les entités créées, effectuer les migrations plus ajout de données.
 
@@ -52,6 +52,16 @@ Pour visualiser les données:
 - Dans l'extension, clic droit sur le container contenant la BDD -> `Attach shell`
 - Se connecter à la bdd: `mysql -p`
 - `use main`
+
+## Production
+
+### Envoie des mails de Contacts
+
+Les mails de prise de contact sont stockés en BDD. Pour les envoyer au 'PRODUCT_MANAGER' par mail, il faut meetre en place un **cron** (https://docs.ovh.com/fr/hosting/mutualise-taches-automatisees-cron/) sur:
+
+```bash
+symfony console app:send-contact
+```
 
 ## Auteur
 

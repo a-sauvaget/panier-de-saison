@@ -9,7 +9,7 @@
 <section class="section is-flex is-flex-wrap-wrap is-justify-content-space-evenly section-legumes">
 	{% for legume in legumes %}
 		<div class="card mb-4">
-			<a href="/legumes/culpa" class="box products-box">
+			<a href="{{path('legume-info', {'legumeName': legume.legumeName})}}" class="box products-box">
 				<div class="card-image">
 					<figure class="image is-4by3">
 						<img src="/uploads/product/{{legume.file}}" alt="{{legume.legumeName}}">

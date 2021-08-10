@@ -18,5 +18,8 @@
 
   &-title {
     text-transform: uppercase;
+    @include small-only {
+      font-size: 1em;
+    }
   }
 }

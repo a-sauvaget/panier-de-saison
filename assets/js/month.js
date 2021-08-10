@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       monthName = 'janvier';
       break;
     case 1:
-      monthName = 'février';
+      monthName = 'fevrier';
       break;
     case 2:
       monthName = 'mars';
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
       monthName = 'juillet';
       break;
     case 7:
-      monthName = 'août';
+      monthName = 'aout';
       break;
     case 8:
       monthName = 'septembre';
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
       monthName = 'novembre';
       break;
     case 11:
-      monthName = 'décembre';
+      monthName = 'decembre';
       break;
     default:
       console.log('Quel est ce mois');

@@ -1,9 +1,17 @@
 <h1 align="center">Welcome to panier-de-saison 👋</h1>
 <p>
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Symfony" src="https://img.shields.io/badge/Made%20with-Symfony%205.3-blue" />
 </p>
 
 > &#34;Panier de saison&#34; est une application Web destinée à tous. Elle a pour but de proposer la liste des fruits et légumes disponible (de saison) à la vente mois par mois.&#34;
+
+<img src="./documents/homepage.png"
+  width="600"
+  height="330"
+/>
+
+## Vidéo de démonstration
 
 ## Pré-requis
 
@@ -59,6 +67,10 @@ Pour visualiser les données:
 - Se connecter à la bdd: `mysql -p`
 - `use main`
 
+### Autre
+
+Le sitemap du site est disponible à l'adresse: `/sitemap.xml`.
+
 ## Création BDD de test
 
 BDD dédié à l'execution de tests.
@@ -74,6 +86,17 @@ Pour lancer les tests:
 ```bash
 APP_ENV=test symfony php bin/phpunit --coverage-html ./tests/test-coverage
 ```
+
+## BackOffice
+
+L'url d'accès au backoffice est le suivant : `/admin`.</br>
+Vous devrez alors vous connecter avec l'adresse de test `user@test.com` et le mot de passe `password`.
+Vous pouvez effectuer les actions du CRUD.
+
+<img src="./documents/admin_fruits.png"
+  width="600"
+  height="330"
+/>
 
 ## Production
 

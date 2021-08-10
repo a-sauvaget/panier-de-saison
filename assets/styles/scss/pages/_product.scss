@@ -7,7 +7,7 @@
   }
   &-box {
     height: 30em;
-    width: 12em;
+    width: 15em;
     @include medium {
       width: 80%;
     }
@@ -17,7 +17,7 @@
     }
   }
   &-image {
-    height: 31em;
+    height: 30em;
     width: auto;
     background-repeat: no-repeat;
     background-size: contain;
@@ -39,7 +39,7 @@
 .list {
   &-item {
     display: block;
-    padding: 1em 0;
+    padding: 0.5em 0;
 
     @include small-only {
       padding: 0.5em 0;

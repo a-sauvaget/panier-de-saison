@@ -6,6 +6,7 @@
     }
   }
   &-box {
+    background-color: $cream;
     height: 30em;
     width: 15em;
     @include medium {

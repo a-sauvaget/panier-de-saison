@@ -8,9 +8,16 @@
 <!-- SECTION  -->
 <section class="section is-flex is-flex-wrap-wrap is-justify-content-space-evenly section-fruits">
 	{% for fruit in fruits %}
-		<a href="{{path('fruit-info', {'fruitName': fruit.fruitName})}}" class="box products-box" style="background-image: url('/uploads/product/{{fruit.file}}');">
-			<h2 class="title has-text-centered products-title">{{fruit.fruitName}}</h2>
-		</a>
+		<div class="card mb-4">
+			<a href="{{path('fruit-info', {'fruitName': fruit.fruitName})}}" class="box products-box">
+				<div class="card-image">
+					<figure class="image is-4by3">
+						<img src="/uploads/product/{{fruit.file}}" alt="{{fruit.fruitName}}">
+					</figure>
+				</div>
+				<h2 class="title pt-5 has-text-centered products-title">{{fruit.fruitName}}</h2>
+			</a>
+		</div>
 	{% endfor %}
 
 </section>

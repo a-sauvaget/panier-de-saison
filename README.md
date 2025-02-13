@@ -113,7 +113,6 @@ symfony console app:send-contact
 ## Auteur
 
 👤 **Alexandre Sauvaget**
-
-- Website: https://a-sauvaget.github.io/a.sauvaget-portfolio/
 - Github: [@a-sauvaget](https://github.com/a-sauvaget)
 - LinkedIn: [@https:\/\/www.linkedin.com\/in\/alexandresauvaget\/](https://linkedin.com/in/https://www.linkedin.com/in/alexandresauvaget/)
+## 🤝 Contributing
